@@ -93,7 +93,7 @@
 /*? #### VERSION MOVIL #### */
 /*? #### ############ #### */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   #cabeceraContent {
     flex-direction: column;
   }
