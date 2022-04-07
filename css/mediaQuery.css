@@ -206,13 +206,14 @@
     background: url(../images/fondo-presentacion-mediano.jpg);
     background-size: auto;
     background-repeat: no-repeat;
-    padding: 4em;
+    padding: 4em 1em;
   }
   /**=> BOTON - TEXTO */
   #logoSlider {
-    /* width: 100%; */
+    width: 50%;
     display: flex;
     flex-flow: column wrap;
+    /* border: solid 1px; */
   }
   #logoSlider h2 {
     font-size: 2.5em;
@@ -237,17 +238,18 @@
 
   /**=> IMAGEN */
   #imagenSlider {
-    /* width: 100%; */
+    width: 50%;
     /* border: solid 1px; */
   }
   #contenedorBurger {
+    padding: 0;
     /* border: solid 1px; */
-    left: 55px;
-    top: -85px;
+    left: 25px;
+    top: -35px;
   }
   #imagenSlider img {
-    width: 15em;
-    height: 15em;
+    width: 13em;
+    height: 11em;
   }
 
   /** #####CONTENIDO BLOQUE ##### */
@@ -297,14 +299,16 @@
   #imgText img {
     width: 100%;
   }
-
+  #imgText > p {
+    line-height: 1em;
+  }
   #imgText > p > a {
     border: solid 4px;
     border-radius: 0.4em;
     font-family: Arial, Helvetica, sans-serif;
     padding: 15px 10px;
     text-align: center;
-    bottom: 5%;
+    bottom: -5px;
   }
 
   #imgText > p > a:hover {
