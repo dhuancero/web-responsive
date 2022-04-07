@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaQuery.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Restaurante</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        // $("#menumovil").click(function(e){
+        // 	e.preventDefault();
+        // 	$("ul").slideToggle(600);
+        // });
+
+        $("#menuMovil").on("click", abrir);
+
+        function abrir() {
+          $("#menuMovil").off("click", abrir);
+          $("#navBar div").slideToggle(600, function () {
+            $("#menuMovil").on("click", abrir);
+          });
+        }
+
+        // La parte de off es para que al clicar varias veces, no ejecute la función hasta que la animación esté terminada por completo.
+
+        // Para que al volver a ampliar la pantalla, no desaparezca el <ul>.
+        $(window).resize(function () {
+          if ($(window).width() >= 601) {
+            $("#navBar div").show();
+          } else {
+            $("#navBar div").hide();
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="contenidoPagina">
+      <!-- ########## HEADER ########## -->
+      <header id="cabecera">
+        <!-- CABECERA LOGO - BOTONES -->
+        <div id="cabeceraContent">
+          <section id="cabeceraLeft">
+            <div id="imagen">
+              <img src="images/logo.png" alt="Aquí va el logo" />
+            </div>
+          </section>
+
+          <section id="cabeceraRight">
+            <article id="cabeceraRightNum" class="cabeRight">
+              <span class="material-icons"> phone</span>
+              <p>511 996 314698</p>
+            </article>
+
+            <article id="cabeceraRightBusca" class="cabeRight">
+              <input
+                type="text"
+                name="buscador"
+                placeholder="Buscar..."
+                id="search"
+              />
+            </article>
+
+            <article id="cabeceraRightrrss" class="cabeRight">
+              <span class="plus">
+                <img src="images/google-plus2.png" alt="logo Google" />
+              </span>
+              <span class="twitter">
+                <img src="images/facebook-icono.png" alt="logo Google"
+              /></span>
+              <span class="face">
+                <img src="images/twitter-icon.png" alt="logo Google"
+              /></span>
+            </article>
+          </section>
+        </div>
+        <!-- NAV -->
+        <nav id="navBar">
+          <a href="#" id="menuMovil">Menú</a>
+          <div>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Menú</a>
+            <a href="#">Galeria</a>
+            <a href="#">Pedidos Online</a>
+            <a href="#">Contáctanos</a>
+            <a href="#">Blog</a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- ########## MAIN ########## -->
+      <main id="mainContent">
+        <section id="contentSlider">
+          <div id="logoSlider">
+            <!-- <div id="logoSliderContent"> -->
+            <h2>el placer de comer</h2>
+            <h3>ven a disfrutar de los mejores platos nacioneles</h3>
+            <a href="">ver nuestros platos</a>
+            <!-- </div> -->
+          </div>
+          <div id="imagenSlider">
+            <div id="contenedorBurger">
+              <img src="images/hamburguesa.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section id="contenidoBloque">
+          <div id="titleBloque">
+            <h1>bienvenido al restaurante maestro</h1>
+            <h2>te invitamos a conocer más de nosotros</h2>
+          </div>
+          <div id="bloque">
+            <section id="bloqueIzq" class="claseBloques">
+              <img src="images/horario-atencion.png" alt="" />
+              <h3>horario de atención</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+                incidunt corrupti sint alias ipsa, et quod, debitis repudiandae,
+                iure exercitationem maxime aliquam? Perspiciatis magnam maxime
+                quia ipsum temporibus in! Distinctio.
+              </p>
+            </section>
+
+            <section id="bloqueCtr" class="claseBloques">
+              <img src="images/nuestra-carta.png" alt="" />
+              <h3>nuestra carta</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+                incidunt corrupti sint alias ipsa, et quod, debitis repudiandae,
+                iure exercitationem maxime aliquam? Perspiciatis magnam maxime
+                quia ipsum temporibus in! Distinctio.
+              </p>
+            </section>
+
+            <section id="bloqueDch" class="claseBloques">
+              <img src="images/nuestros-locales.png" alt="" />
+              <h3>nuestros locales</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+                incidunt corrupti sint alias ipsa, et quod, debitis repudiandae,
+                iure exercitationem maxime aliquam? Perspiciatis magnam maxime
+                quia ipsum temporibus in! Distinctio.
+              </p>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <!-- ########## FOOTER ########## -->
+      <footer id="footer">
+        <div id="contentFooter">
+          <section id="footerIzq">
+            <div class="footerTitulo">¿QUIENES SOMOS?</div>
+            <div id="imgText">
+              <img src="images/quienes-somos.jpg" alt="" />
+              <p>
+                <span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Explicabo molestias obcaecati sint nemo assumenda, quaerat
+                  nesciunt natus libero quod pariatur eum eos esse omnis sunt
+                  ipsum voluptatibus quidem! Obcaecati nam laborum itaque
+                  asperiores mollitia assumenda voluptatum est id consequuntur
+                  cupiditate!
+                </span>
+                <br />
+                <a href="">Ver Más</a>
+              </p>
+            </div>
+          </section>
+
+          <section id="footerDch">
+            <h2 class="footerTitulo">AQUÍ ESTAMOS</h2>
+            <div id="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.8729119042328!2d-4.770345185177032!3d41.636878388455266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd476d09f5004505%3A0xd20b50e49dd8b3fc!2sCentro%20Formativo%20Planform%20S.L.!5e0!3m2!1ses!2ses!4v1649158539408!5m2!1ses!2ses"
+                width="100%"
+                height="400"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </section>
+        </div>
+        <div id="copyRight">
+          <p>CopyRight &copy; 2022. Restaurtante Maestro</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

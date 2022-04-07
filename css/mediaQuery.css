@@ -1,0 +1,324 @@
+/*? #### PANTALLAS GRANDES ####*/
+
+/*? #### PRIMER MINI - MAX #### */
+@media screen and (max-width: 835px) {
+  #cabeceraContent {
+    flex-direction: column;
+  }
+  #cabeceraLeft {
+    text-align: center;
+  }
+  #navBar div a:first-child {
+    width: 100%;
+  }
+
+  #navBar div {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    /* justify-content: space-around; */
+  }
+  #menuMovil {
+    display: none;
+  }
+
+  #navBar div a {
+    width: 50%;
+    display: flex;
+    padding: 0.6em 1em;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #contenedorBurger {
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    top: -100px;
+  }
+  .claseBloques > p {
+    text-align: justify;
+  }
+
+  #bloqueCtr h3 {
+    font-size: 1.99em;
+    line-height: 1.1em;
+  }
+  #footer {
+    background-color: #ee5624;
+  }
+  #contentFooter {
+    flex-flow: column wrap;
+    padding: 1em 0.5em;
+    justify-content: space-between;
+  }
+  #footerIzq {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 0;
+    width: 100%;
+  }
+  #imgText {
+    padding: 0;
+  }
+
+  #imgText img {
+    width: 100%;
+  }
+
+  #imgText > p > a {
+    border: solid 4px;
+    border-radius: 0.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 10px;
+    text-align: center;
+    bottom: 5%;
+  }
+
+  #imgText > p > a:hover {
+    border: solid 4px;
+    opacity: 0.6;
+  }
+  /* todo: Footer Dch */
+  #footerDch {
+    padding: 0em;
+    width: 100%;
+  }
+  #footerDch > #mapa {
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/*? #### VERSION MOVIL #### */
+/*? #### ############ #### */
+
+@media screen and (max-width: 600px) {
+  #cabeceraContent {
+    flex-direction: column;
+  }
+  #cabeceraLeft {
+    text-align: center;
+  }
+  #cabeceraRight {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 1px; */
+    justify-content: space-around;
+    /* flex: 1 1 auto; */
+  }
+  /* todo=> cabecera Right Num */
+  #cabeceraRightNum {
+    border: solid 1px;
+    padding: 5em;
+    width: 90%;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+    margin: 0 1em;
+    background-color: #ee5624;
+    font-size: 1.5em;
+  }
+
+  #cabeceraRightNum:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  /* todo=> cabecera Right Busca */
+  #cabeceraRightBusca input {
+    padding: 1.5em 8.7em;
+    width: 100%;
+    justify-content: center;
+    font-size: 1em;
+    border-radius: 10px;
+    /* display: flex; */
+    /* justify-content: center; */
+  }
+  #cabeceraRightBusca input:hover {
+    border-color: #ee5624;
+    /* color: #ee5624; */
+  }
+  #cabeceraRightrrss span img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    padding: 0.7em;
+  }
+
+  /**=> #### NAV #### */
+  #navBar {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    justify-content: space-around;
+  }
+  #navBar div {
+    display: block;
+    /* flex-flow: row nowrap; */
+    width: 100%;
+    /* justify-content: center; */
+  }
+
+  #navBar div a {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+  }
+  /*------BOTÓN MENÚ--------*/
+  #menuMovil {
+    display: block;
+    width: 100%;
+    background-color: #ee5624;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    position: relative;
+  }
+  #menuMovil:before {
+    content: "";
+    position: absolute;
+    width: 2.0625em;
+    height: 4px;
+    background-color: #5b625d;
+    right: 0.7em;
+    top: 0.5em;
+    border-top: 12px double #ee5624;
+    border-bottom: 12px double #ee5624;
+    transition: all 0.5s ease;
+  }
+
+  #menuMovil:hover:before {
+    content: "";
+    border-top: 12px double #ee5624;
+    border-bottom: 12px double #ee5624;
+    background-color: #ee5624;
+  }
+
+  /*? @@@@@@@@@@ MAIN @@@@@@@@ */
+  /*? @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+  #contentSlider {
+    justify-content: space-around;
+    align-content: center;
+    background: url(../images/fondo-presentacion-mediano.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 4em;
+  }
+  /**=> BOTON - TEXTO */
+  #logoSlider {
+    /* width: 100%; */
+    display: flex;
+    flex-flow: column wrap;
+  }
+  #logoSlider h2 {
+    font-size: 2.5em;
+  }
+  #logoSlider h3 {
+    display: none;
+  }
+  #logoSlider a {
+    font-size: 1.4em;
+    padding: 10px;
+    width: 11em;
+    border: solid 0.3em rgba(255, 255, 255, 0.5);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  #logoSlider a:hover {
+    opacity: 0.9;
+    border: solid 0.3em rgba(255, 255, 255, 0.5);
+  }
+
+  /**=> IMAGEN */
+  #imagenSlider {
+    /* width: 100%; */
+    /* border: solid 1px; */
+  }
+  #contenedorBurger {
+    /* border: solid 1px; */
+    left: 55px;
+    top: -85px;
+  }
+  #imagenSlider img {
+    width: 15em;
+    height: 15em;
+  }
+
+  /** #####CONTENIDO BLOQUE ##### */
+  #contenidoBloque {
+    width: 100%;
+    margin: 1em 0em 0em 0em;
+  }
+  /** =>  TITLE BLOQUES  */
+  #titleBloque h2 {
+    font-size: 1.6em;
+  }
+
+  /** =>  BLOQUES  */
+  #bloque {
+    flex-flow: column wrap;
+  }
+  /* todo: Bloque Clases */
+  .claseBloques {
+    text-align: center;
+    width: 100%;
+    padding: 1em;
+    border-bottom: #ee5624 solid 0.3em;
+  }
+
+  /*? @@@@@@@@@@ FOOTER @@@@@@@@ */
+  /*? @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+  #footer {
+    background-color: #ee5624;
+  }
+  #contentFooter {
+    flex-flow: column wrap;
+    padding: 1em 0.5em;
+    justify-content: space-between;
+  }
+
+  #footerIzq {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 0;
+    width: 100%;
+  }
+  #imgText {
+    padding: 0;
+  }
+
+  #imgText img {
+    width: 100%;
+  }
+
+  #imgText > p > a {
+    border: solid 4px;
+    border-radius: 0.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 10px;
+    text-align: center;
+    bottom: 5%;
+  }
+
+  #imgText > p > a:hover {
+    border: solid 4px;
+    opacity: 0.6;
+  }
+  /* todo: Footer Dch */
+  #footerDch {
+    padding: 0em;
+    width: 100%;
+  }
+  #footerDch > #mapa {
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+  }
+}
